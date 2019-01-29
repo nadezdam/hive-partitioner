@@ -1,0 +1,11 @@
+#!/usr/bin/expect -f
+
+spawn mysql -u root -p; sleep 1;
+expect -re ".*Enter password.*" { send "root\r"; };
+expect -re ".*mysql>.*" { send "CREATE DATABASE metastore;\r"; };
+expect -re ".*mysql>.*" { send "USE metastore;\r"; };
+expect -re ".*mysql>.*" { send "SOURCE hive-schema-2.1.0.mysql.sql;\r"; };
+expect -re ".*mysql>.*" { send "CREATE USER \"hiveuser\"@\"%\" IDENTIFIED BY \"hivepassword\";\r"; };
+expect -re ".*mysql>.*" { send "GRANT all on *.* to \"hiveuser\"@localhost identified by \"hivepassword\";\r"; };
+expect -re ".*mysql>.*" { send "flush privileges;\r"; };
+expect -re ".*mysql>.*" { exit; }
