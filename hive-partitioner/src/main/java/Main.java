@@ -20,13 +20,13 @@ public class Main {
 			DataManager dm = new DataManager(connect);
 			String createTableFile = args[0];
 			String dataFile = args[1];
-			//dm.Initialize(createTableFile, dataFile);
+			dm.Initialize(createTableFile, dataFile);
 			
-			String queriesFile = args[2];
-			int numOfQueries = 50;
-			dm.RunExampleQueries(queriesFile, numOfQueries);
+//			String queriesFile = args[2];
+//			int numOfQueries = 50;
+//			dm.RunExampleQueries(queriesFile, numOfQueries);
 			
-		    //dm.PartitionTable();
+//		    dm.TestPartitioning();
 		    
 		} catch (Exception e) {
 			e.printStackTrace();

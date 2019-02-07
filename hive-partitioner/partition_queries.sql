@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS Parking.ParkingCitations_PartitionedByAgencyAndFineamount (ticketnumber string,
+issuedate string,
+issuetime int,
+meterid string,
+markedtime string,
+rpstateplate string,
+plateexpirydate int,
+vin string,
+make string,
+bodystyle string,
+color string,
+location string,
+route string,
+violationcode string,
+violationdesc string,
+latitude int,
+longitude int)
+PARTITIONED BY(agency int, fineamount int)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE
+
+INSERT OVERWRITE TABLE Parking.ParkingCitations_PartitionedByAgencyAndFineamount PARTITION(agency, fineamount) SELECT ticketnumber,
+issuedate,
+issuetime,
+meterid,
+markedtime,
+rpstateplate,
+plateexpirydate,
+vin,
+make,
+bodystyle,
+color,
+location,
+route,
+violationcode,
+violationdesc,
+latitude,
+longitude,
+agency, fineamount FROM Parking.ParkingCitations

@@ -1,0 +1,5 @@
+partition by make
+- || - issuedate
+partition by multiple columns (agency, fineamount, etc.)
+query performance on partitioned vs unpartitioned tables
+query performance on differently partitioned tables
