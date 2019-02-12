@@ -4,12 +4,15 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Random;
 import java.util.Vector;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 import com.jcraft.jsch.Channel;
@@ -26,17 +29,15 @@ public class DataManager {
 	private String dbName;
 	private String tableName;
 	private String partitionTableName;
-	private String partitionByColumnName;
 
 	public DataManager(Connection conn) {
 		try {
 			this.connection = conn;
 			stmt = connection.createStatement();
 			hostFileLocation = "/tmp/root/hive.log";
-			userFileLocation = "C:\\git\\hadoop-2node-cluster\\hive-partitioner\\hive.log";
+			userFileLocation = "C:\\git\\hive-partitioner\\hive-partitioner\\hive.log";
 			dbName = "Parking";
 			tableName = "ParkingCitations";
-			partitionTableName = "ParkingCitationsPartitioned";
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
@@ -88,9 +89,95 @@ public class DataManager {
 		}
 	}
 
-	public void PartitionTable() {
+	public void TestPartitioning() {
+		HashMap<String, Float> columns = this.getMostFreqColumns();
 
-		this.partitionByColumnName = this.recommendPartitionColumn();
+		String recommendedColumn = this.recommendPartitionColumn(columns);
+
+		// Partition by recommended column
+		long tEstimated = this.partitionTable(recommendedColumn);
+
+		printEstimatedTime(tEstimated, recommendedColumn);
+		
+		// Partition by the rest of the columns
+		columns.remove(recommendedColumn);
+		for (Entry<String, Float> entry : columns.entrySet()) {
+			String column = entry.getKey();
+
+			tEstimated = this.partitionTable(column);
+			printEstimatedTime(tEstimated, column);
+		}
+		
+		// Partition by recommended and other, random column (multi-column partitioning)
+		HashMap<String, String> multipleColumnsPartitioning = new HashMap<String, String>();
+		
+		String randColumn = randomColumn(columns);
+		
+		multipleColumnsPartitioning.put(recommendedColumn, "");
+		multipleColumnsPartitioning.put(randColumn, "");
+		
+		tEstimated = this.partitionTable(multipleColumnsPartitioning);
+		printEstimatedTime(tEstimated, recommendedColumn + " and " + randColumn);
+		
+		// Partition by any two columns 
+		// (sans 'issuedate' and 'make', as we established that those columns are problematic for small clusters)
+		columns.put(recommendedColumn, 0.0f); // return recommendedColumn to 'columns' HashMap for this testing
+		columns.remove("issuedate");
+		columns.remove("make");
+
+		multipleColumnsPartitioning.clear();
+
+		Iterator<String> columnIterator = columns.keySet().iterator();
+		
+		while (columnIterator.hasNext()) {
+			String firstColumn = columnIterator.next();
+
+			for (String secondColumn : columns.keySet()) {				
+				if (!firstColumn.equalsIgnoreCase(secondColumn)) {
+
+					multipleColumnsPartitioning.put(firstColumn, "");
+					multipleColumnsPartitioning.put(secondColumn, "");
+					
+					tEstimated = this.partitionTable(multipleColumnsPartitioning);
+					printEstimatedTime(tEstimated, firstColumn + " and " + secondColumn);
+					
+					multipleColumnsPartitioning.clear();
+				}
+			}
+			
+			columnIterator.remove();
+		}
+	}
+	
+	private String randomColumn(HashMap<String, Float> columns) {
+		Random rand = new Random();
+		
+		int idx = rand.nextInt(columns.size());
+		
+		return (String) columns.keySet().toArray()[idx];
+	}
+
+	private void printEstimatedTime(long time, String byColumn) {
+		String estimatedTime = String.format("%02d min, %02d sec", 
+			    TimeUnit.MILLISECONDS.toMinutes(time),
+			    TimeUnit.MILLISECONDS.toSeconds(time) - 
+			    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(time))
+			);
+		
+		System.out.println("Estimated time for partitioning by " + byColumn + " is: " + estimatedTime);
+	}
+	
+	private long partitionTable(String partitionColumn) {
+		HashMap<String, String> partitionColumns = new HashMap<String, String>();
+		partitionColumns.put(partitionColumn, "");
+		return this.partitionTable(partitionColumns);
+	}
+
+	private long partitionTable(HashMap<String, String> partitionColumns) {
+
+		long tStart = 0;
+		long tEstimated = 0;
+		this.partitionTableName = this.tableName + "PartitionedBy" + String.join("And", partitionColumns.keySet());
 
 		try {
 			stmt.execute("SET hive.exec.dynamic.partition=true");
@@ -104,48 +191,52 @@ public class DataManager {
 
 			ResultSet result = stmt.executeQuery("DESCRIBE " + dbName + "." + tableName);
 
-			String partitionByColumnType = "";
-
 			while (result.next()) {
 				String columnName = result.getString(1).toLowerCase();
 				String columnType = result.getString(2);
 
-				if (columnName.equalsIgnoreCase(partitionByColumnName)) {
-					partitionByColumnType = columnType;
+				if (partitionColumns.keySet().contains(columnName)) {
+					partitionColumns.put(columnName,columnType);
 				} else {
 					columnsWithTypes.add(columnName + " " + columnType);
 					columns.add(columnName);
 				}
 			}
 
-			columns.add(this.partitionByColumnName);
+			columns.add(String.join(", ", partitionColumns.keySet()));
+			
+			ArrayList<String> partitionColumnsWithTypes = new ArrayList<String>();
 
+			for (Entry<String, String> entry : partitionColumns.entrySet())
+			{
+				partitionColumnsWithTypes.add(entry.getKey() + " " + entry.getValue());
+			}
+			
 			partitionQuery += String.join(",\r\n", columnsWithTypes) + ")\r\n";
-			partitionQuery += "PARTITIONED BY(" + partitionByColumnName + " " + partitionByColumnType + ")\r\n"
+			partitionQuery += "PARTITIONED BY(" + String.join(", ", partitionColumnsWithTypes) + ")\r\n"
 					+ "ROW FORMAT DELIMITED\r\n" + "FIELDS TERMINATED BY '\\t'\r\n" + "STORED AS TEXTFILE";
 
 			String copyToPartitionedTableQuery = "INSERT OVERWRITE TABLE " + dbName + "." + this.partitionTableName
-					+ " PARTITION(" + this.partitionByColumnName + ")" + " SELECT ";
+					+ " PARTITION(" + String.join(", ", partitionColumns.keySet()) + ")" + " SELECT ";
 			copyToPartitionedTableQuery += String.join(",\r\n", columns);
 			copyToPartitionedTableQuery += " FROM " + dbName + "." + tableName;
 
+			tStart = System.currentTimeMillis();
 			System.out.println(">> Executing query: " + partitionQuery);
 			stmt.execute(partitionQuery);
 
 			System.out.println(">> Executing query: " + copyToPartitionedTableQuery);
 			stmt.execute(copyToPartitionedTableQuery);
+			tEstimated = System.currentTimeMillis() - tStart;
 
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
 
+		return tEstimated;
 	}
 
-	private String recommendPartitionColumn() {
-
-		this.acquireHiveLog();
-
-		HashMap<String, Float> columns = getMostFreqColumns();
+	private String recommendPartitionColumn(HashMap<String, Float> columns) {
 
 		Iterator<Entry<String, Float>> it = columns.entrySet().iterator();
 		while (it.hasNext()) {
@@ -193,7 +284,7 @@ public class DataManager {
 	private void acquireHiveLog() {
 		try {
 			JSch jsch = new JSch();
-			jsch.addIdentity("C:/git/hadoop-2node-cluster/id_rsa.pem");
+			jsch.addIdentity("C:/git/hive-partitioner/id_rsa.pem");
 
 			String host = "root@127.0.0.1";
 			String user = host.substring(0, host.indexOf('@'));
