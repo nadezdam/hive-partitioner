@@ -22,9 +22,9 @@ public class Main {
 			String dataFile = args[1];
 			dm.Initialize(createTableFile, dataFile);
 			
-			String queriesFile = args[2];
-			int numOfQueries = 50;
-			dm.RunExampleQueries(queriesFile, numOfQueries);
+//			String queriesFile = args[2];
+//			int numOfQueries = 50;
+//			dm.RunExampleQueries(queriesFile, numOfQueries);
 			
 		    dm.TestPartitioning();
 		    

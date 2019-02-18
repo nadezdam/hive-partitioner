@@ -149,23 +149,7 @@ public class DataManager {
 		}
 	}
 	
-	private String randomColumn(HashMap<String, Float> columns) {
-		Random rand = new Random();
-		
-		int idx = rand.nextInt(columns.size());
-		
-		return (String) columns.keySet().toArray()[idx];
-	}
-
-	private void printEstimatedTime(long time, String byColumn) {
-		String estimatedTime = String.format("%02d min, %02d sec", 
-			    TimeUnit.MILLISECONDS.toMinutes(time),
-			    TimeUnit.MILLISECONDS.toSeconds(time) - 
-			    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(time))
-			);
-		
-		System.out.println("Estimated time for partitioning by " + byColumn + " is: " + estimatedTime);
-	}
+	
 	
 	private long partitionTable(String partitionColumn) {
 		HashMap<String, String> partitionColumns = new HashMap<String, String>();
@@ -180,10 +164,14 @@ public class DataManager {
 		this.partitionTableName = this.tableName + "PartitionedBy" + String.join("And", partitionColumns.keySet());
 
 		try {
+			stmt.execute("SET hive.optimize.sort.dynamic.partition=true");
 			stmt.execute("SET hive.exec.dynamic.partition=true");
 			stmt.execute("SET hive.exec.dynamic.partition.mode=nonstrict");
 			stmt.execute("SET hive.exec.max.dynamic.partitions=100000");
 			stmt.execute("SET hive.exec.max.dynamic.partitions.pernode=100000");
+
+			
+
 
 			String partitionQuery = "CREATE TABLE IF NOT EXISTS " + dbName + "." + partitionTableName + " (";
 			Vector<String> columns = new Vector<String>();
@@ -390,4 +378,23 @@ public class DataManager {
 
 		return numOfDistinctValues;
 	}
+
+	private String randomColumn(HashMap<String, Float> columns) {
+		Random rand = new Random();
+		
+		int idx = rand.nextInt(columns.size());
+		
+		return (String) columns.keySet().toArray()[idx];
+	}
+
+	private void printEstimatedTime(long time, String byColumn) {
+		String estimatedTime = String.format("%02d min, %02d sec", 
+			    TimeUnit.MILLISECONDS.toMinutes(time),
+			    TimeUnit.MILLISECONDS.toSeconds(time) - 
+			    TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(time))
+			);
+		
+		System.out.println("Estimated time for partitioning by " + byColumn + " is: " + estimatedTime);
+	}
+	
 }
