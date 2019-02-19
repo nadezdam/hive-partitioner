@@ -1246,6 +1246,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:26:26,961 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:26:26,964 INFO  [HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:26:26,964 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Updating thread name to 90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54
+2019-01-27T12:26:26,966 INFO  [HiveServer2-Handler-Pool: Thread-54]: ql.Driver (:()) - Compiling command(queryId=root_20190127122626_b4922ff1-e511-48f4-bf57-8802d9bfe6d0):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:26:27,005 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T12:26:27,025 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T12:26:27,025 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -1277,6 +1278,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:26:29,470 INFO  [90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:26:29,471 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:26:29,474 INFO  [HiveServer2-Background-Pool: Thread-80]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T12:26:29,474 INFO  [HiveServer2-Background-Pool: Thread-80]: ql.Driver (:()) - Executing command(queryId=root_20190127122626_b4922ff1-e511-48f4-bf57-8802d9bfe6d0):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:26:29,475 WARN  [HiveServer2-Background-Pool: Thread-80]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:26:29,475 INFO  [HiveServer2-Background-Pool: Thread-80]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:26:29,475 INFO  [HiveServer2-Background-Pool: Thread-80]: ql.Driver (:()) - Query ID = root_20190127122626_b4922ff1-e511-48f4-bf57-8802d9bfe6d0
@@ -1338,6 +1340,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:27:25,231 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:27:25,234 INFO  [HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:27:25,234 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Updating thread name to 90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54
+2019-01-27T12:27:25,241 INFO  [HiveServer2-Handler-Pool: Thread-54]: ql.Driver (:()) - Compiling command(queryId=root_20190127122725_af1d7e00-0787-4bd3-8014-4ec040d35463):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:27:25,246 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T12:27:25,246 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T12:27:25,247 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -1368,6 +1371,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:27:25,445 INFO  [90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:27:25,445 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:27:25,451 INFO  [HiveServer2-Background-Pool: Thread-96]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T12:27:25,451 INFO  [HiveServer2-Background-Pool: Thread-96]: ql.Driver (:()) - Executing command(queryId=root_20190127122725_af1d7e00-0787-4bd3-8014-4ec040d35463):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:27:25,451 WARN  [HiveServer2-Background-Pool: Thread-96]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:27:25,452 INFO  [HiveServer2-Background-Pool: Thread-96]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:27:25,452 INFO  [HiveServer2-Background-Pool: Thread-96]: ql.Driver (:()) - Query ID = root_20190127122725_af1d7e00-0787-4bd3-8014-4ec040d35463
@@ -1611,6 +1615,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:29:58,257 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:29:58,259 INFO  [HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:29:58,259 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Updating thread name to 90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54
+2019-01-27T12:29:58,260 INFO  [HiveServer2-Handler-Pool: Thread-54]: ql.Driver (:()) - Compiling command(queryId=root_20190127122958_91782cde-aa94-4b05-aba2-c5337fe7b7a6):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:29:58,262 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T12:29:58,263 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T12:29:58,263 INFO  [HiveServer2-Handler-Pool: Thread-54]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -1641,6 +1646,7 @@ Caused by: org.apache.hadoop.hive.ql.metadata.InvalidTableException: Table not f
 2019-01-27T12:29:58,454 INFO  [90a194cb-f8e0-4bb9-aade-d6c79dc53e59 HiveServer2-Handler-Pool: Thread-54]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 90a194cb-f8e0-4bb9-aade-d6c79dc53e59
 2019-01-27T12:29:58,455 INFO  [HiveServer2-Handler-Pool: Thread-54]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-54
 2019-01-27T12:29:58,457 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T12:29:58,458 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (:()) - Executing command(queryId=root_20190127122958_91782cde-aa94-4b05-aba2-c5337fe7b7a6):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T12:29:58,458 WARN  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:29:58,458 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T12:29:58,458 INFO  [HiveServer2-Background-Pool: Thread-144]: ql.Driver (:()) - Query ID = root_20190127122958_91782cde-aa94-4b05-aba2-c5337fe7b7a6
@@ -4701,6 +4707,7 @@ No GCs detected
 2019-01-27T13:15:29,672 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:15:29,700 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:15:29,706 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:15:29,775 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127131529_0a736c26-20e0-478a-98ef-818613917b7d):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:15:29,945 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:15:29,954 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:15:29,956 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -4733,6 +4740,7 @@ No GCs detected
 2019-01-27T13:15:32,222 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:15:32,222 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:15:32,321 INFO  [HiveServer2-Background-Pool: Thread-476]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:15:32,323 INFO  [HiveServer2-Background-Pool: Thread-476]: ql.Driver (:()) - Executing command(queryId=root_20190127131529_0a736c26-20e0-478a-98ef-818613917b7d):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:15:32,326 WARN  [HiveServer2-Background-Pool: Thread-476]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:15:32,326 INFO  [HiveServer2-Background-Pool: Thread-476]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:15:32,333 INFO  [HiveServer2-Background-Pool: Thread-476]: ql.Driver (:()) - Query ID = root_20190127131529_0a736c26-20e0-478a-98ef-818613917b7d
@@ -5165,6 +5173,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=886ms
 2019-01-27T13:22:31,259 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:22:31,281 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:22:31,285 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:22:31,368 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127132231_31dc713e-60b2-4522-9914-60f61015a7ec):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:22:31,544 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:22:31,555 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:22:31,556 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -5197,6 +5206,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=886ms
 2019-01-27T13:22:34,142 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:22:34,143 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:22:34,235 INFO  [HiveServer2-Background-Pool: Thread-561]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:22:34,236 INFO  [HiveServer2-Background-Pool: Thread-561]: ql.Driver (:()) - Executing command(queryId=root_20190127132231_31dc713e-60b2-4522-9914-60f61015a7ec):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:22:34,241 WARN  [HiveServer2-Background-Pool: Thread-561]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:22:34,242 INFO  [HiveServer2-Background-Pool: Thread-561]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:22:34,243 INFO  [HiveServer2-Background-Pool: Thread-561]: ql.Driver (:()) - Query ID = root_20190127132231_31dc713e-60b2-4522-9914-60f61015a7ec
@@ -5441,6 +5451,7 @@ No GCs detected
 2019-01-27T13:26:54,122 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:26:54,155 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:26:54,157 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:26:54,220 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127132654_be8ee186-6b8f-486d-977b-9f2628c0858b):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:26:54,382 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:26:54,395 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:26:54,398 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -5471,6 +5482,7 @@ No GCs detected
 2019-01-27T13:26:56,250 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:26:56,251 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:26:56,269 INFO  [HiveServer2-Background-Pool: Thread-613]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:26:56,271 INFO  [HiveServer2-Background-Pool: Thread-613]: ql.Driver (:()) - Executing command(queryId=root_20190127132654_be8ee186-6b8f-486d-977b-9f2628c0858b):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:26:56,274 WARN  [HiveServer2-Background-Pool: Thread-613]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:26:56,275 INFO  [HiveServer2-Background-Pool: Thread-613]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:26:56,275 INFO  [HiveServer2-Background-Pool: Thread-613]: ql.Driver (:()) - Query ID = root_20190127132654_be8ee186-6b8f-486d-977b-9f2628c0858b
@@ -5809,6 +5821,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=2905ms
 2019-01-27T13:33:29,083 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:33:29,112 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:33:29,114 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:33:29,207 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127133329_9327bdf2-afd2-40dc-955c-8c92189dc2bf):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:33:29,249 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:33:29,254 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:33:29,255 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -5839,6 +5852,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=2905ms
 2019-01-27T13:33:30,627 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:33:30,627 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:33:30,707 INFO  [HiveServer2-Background-Pool: Thread-681]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:33:30,709 INFO  [HiveServer2-Background-Pool: Thread-681]: ql.Driver (:()) - Executing command(queryId=root_20190127133329_9327bdf2-afd2-40dc-955c-8c92189dc2bf):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:33:30,711 WARN  [HiveServer2-Background-Pool: Thread-681]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:33:30,712 INFO  [HiveServer2-Background-Pool: Thread-681]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:33:30,713 INFO  [HiveServer2-Background-Pool: Thread-681]: ql.Driver (:()) - Query ID = root_20190127133329_9327bdf2-afd2-40dc-955c-8c92189dc2bf
@@ -6184,6 +6198,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=872ms
 2019-01-27T13:40:53,711 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:40:53,727 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:40:53,728 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:40:53,776 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127134053_847321c9-8fa9-4a93-b60c-9ff4e76730cd):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:40:53,876 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:40:53,886 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:40:53,888 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -6214,6 +6229,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=872ms
 2019-01-27T13:40:55,946 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:40:55,946 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:40:56,120 INFO  [HiveServer2-Background-Pool: Thread-749]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:40:56,122 INFO  [HiveServer2-Background-Pool: Thread-749]: ql.Driver (:()) - Executing command(queryId=root_20190127134053_847321c9-8fa9-4a93-b60c-9ff4e76730cd):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:40:56,129 WARN  [HiveServer2-Background-Pool: Thread-749]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:40:56,129 INFO  [HiveServer2-Background-Pool: Thread-749]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:40:56,130 INFO  [HiveServer2-Background-Pool: Thread-749]: ql.Driver (:()) - Query ID = root_20190127134053_847321c9-8fa9-4a93-b60c-9ff4e76730cd
@@ -6366,6 +6382,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=872ms
 2019-01-27T13:44:04,266 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:44:04,289 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:44:04,290 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:44:04,328 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127134404_1b7c92a9-b89b-47ef-a1b7-a9c7703492f0):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:44:04,462 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:44:04,469 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:44:04,469 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -6396,6 +6413,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=872ms
 2019-01-27T13:44:05,324 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:44:05,324 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:44:05,492 INFO  [HiveServer2-Background-Pool: Thread-783]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:44:05,495 INFO  [HiveServer2-Background-Pool: Thread-783]: ql.Driver (:()) - Executing command(queryId=root_20190127134404_1b7c92a9-b89b-47ef-a1b7-a9c7703492f0):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:44:05,497 WARN  [HiveServer2-Background-Pool: Thread-783]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:44:05,498 INFO  [HiveServer2-Background-Pool: Thread-783]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:44:05,498 INFO  [HiveServer2-Background-Pool: Thread-783]: ql.Driver (:()) - Query ID = root_20190127134404_1b7c92a9-b89b-47ef-a1b7-a9c7703492f0
@@ -6652,6 +6670,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=533ms
 2019-01-27T13:49:23,820 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:49:23,841 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:49:23,844 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:49:23,897 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127134923_5f7efc5d-3959-4593-9311-20aeb556ed2c):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:49:24,008 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:49:24,013 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:49:24,015 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -6682,6 +6701,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=533ms
 2019-01-27T13:49:25,994 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:49:26,202 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:49:26,223 INFO  [HiveServer2-Background-Pool: Thread-835]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:49:26,224 INFO  [HiveServer2-Background-Pool: Thread-835]: ql.Driver (:()) - Executing command(queryId=root_20190127134923_5f7efc5d-3959-4593-9311-20aeb556ed2c):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:49:26,225 WARN  [HiveServer2-Background-Pool: Thread-835]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:49:26,226 INFO  [HiveServer2-Background-Pool: Thread-835]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:49:26,226 INFO  [HiveServer2-Background-Pool: Thread-835]: ql.Driver (:()) - Query ID = root_20190127134923_5f7efc5d-3959-4593-9311-20aeb556ed2c
@@ -6928,6 +6948,7 @@ No GCs detected
 2019-01-27T13:54:14,272 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:54:14,294 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:54:14,296 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:54:14,362 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127135414_18ed1e97-c284-4782-b8b5-c190e36f411c):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:54:14,548 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:54:14,589 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:54:14,608 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -6958,6 +6979,7 @@ No GCs detected
 2019-01-27T13:54:16,665 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:54:16,666 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:54:16,754 INFO  [HiveServer2-Background-Pool: Thread-886]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:54:16,757 INFO  [HiveServer2-Background-Pool: Thread-886]: ql.Driver (:()) - Executing command(queryId=root_20190127135414_18ed1e97-c284-4782-b8b5-c190e36f411c):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:54:16,760 WARN  [HiveServer2-Background-Pool: Thread-886]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:54:16,760 INFO  [HiveServer2-Background-Pool: Thread-886]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:54:16,761 INFO  [HiveServer2-Background-Pool: Thread-886]: ql.Driver (:()) - Query ID = root_20190127135414_18ed1e97-c284-4782-b8b5-c190e36f411c
@@ -7119,6 +7141,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=6573ms
 2019-01-27T13:58:10,380 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:58:10,397 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:58:10,398 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T13:58:10,496 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127135810_6a4333f7-bfa3-4232-936e-bfc40d18ceef):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:58:10,615 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T13:58:10,634 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T13:58:10,636 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -7149,6 +7172,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=6573ms
 2019-01-27T13:58:12,334 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T13:58:12,334 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T13:58:12,437 INFO  [HiveServer2-Background-Pool: Thread-922]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T13:58:12,438 INFO  [HiveServer2-Background-Pool: Thread-922]: ql.Driver (:()) - Executing command(queryId=root_20190127135810_6a4333f7-bfa3-4232-936e-bfc40d18ceef):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T13:58:12,441 WARN  [HiveServer2-Background-Pool: Thread-922]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:58:12,441 INFO  [HiveServer2-Background-Pool: Thread-922]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T13:58:12,442 INFO  [HiveServer2-Background-Pool: Thread-922]: ql.Driver (:()) - Query ID = root_20190127135810_6a4333f7-bfa3-4232-936e-bfc40d18ceef
@@ -7720,6 +7744,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=1094ms
 2019-01-27T14:14:20,083 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T14:14:20,109 INFO  [HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T14:14:20,110 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Updating thread name to 37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283
+2019-01-27T14:14:20,164 INFO  [HiveServer2-Handler-Pool: Thread-283]: ql.Driver (:()) - Compiling command(queryId=root_20190127141420_f12a6fe5-20fc-4ea3-a661-4ad6fef7db14):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T14:14:20,428 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Starting Semantic Analysis
 2019-01-27T14:14:20,434 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Completed phase 1 of Semantic Analysis
 2019-01-27T14:14:20,436 INFO  [HiveServer2-Handler-Pool: Thread-283]: parse.CalcitePlanner (:()) - Get metadata for source tables
@@ -7750,6 +7775,7 @@ GC pool 'PS Scavenge' had collection(s): count=1 time=1094ms
 2019-01-27T14:14:22,243 INFO  [37b096a7-a055-4239-b815-a2b6975b4891 HiveServer2-Handler-Pool: Thread-283]: conf.HiveConf (HiveConf.java:getLogIdVar(3511)) - Using the default value passed in for log id: 37b096a7-a055-4239-b815-a2b6975b4891
 2019-01-27T14:14:22,244 INFO  [HiveServer2-Handler-Pool: Thread-283]: session.SessionState (:()) - Resetting thread name to  HiveServer2-Handler-Pool: Thread-283
 2019-01-27T14:14:22,259 INFO  [HiveServer2-Background-Pool: Thread-1035]: ql.Driver (:()) - Concurrency mode is disabled, not creating a lock manager
+2019-01-27T14:14:22,260 INFO  [HiveServer2-Background-Pool: Thread-1035]: ql.Driver (:()) - Executing command(queryId=root_20190127141420_f12a6fe5-20fc-4ea3-a661-4ad6fef7db14):  SELECT TicketNumber FROM ParkingCitations WHERE IssueDate LIKE '_2015-09-15_'
 2019-01-27T14:14:22,263 WARN  [HiveServer2-Background-Pool: Thread-1035]: ql.Driver (:()) - Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T14:14:22,263 INFO  [HiveServer2-Background-Pool: Thread-1035]: ql.Driver (:()) - WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. tez, spark) or using Hive 1.X releases.
 2019-01-27T14:14:22,264 INFO  [HiveServer2-Background-Pool: Thread-1035]: ql.Driver (:()) - Query ID = root_20190127141420_f12a6fe5-20fc-4ea3-a661-4ad6fef7db14

@@ -41,7 +41,6 @@ public class DataManager {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-
 	}
 
 	public void Initialize(String createTableFile, String dataFile) {
@@ -120,10 +119,7 @@ public class DataManager {
 		printEstimatedTime(tEstimated, recommendedColumn + " and " + randColumn);
 		
 		// Partition by any two columns 
-		// (sans 'issuedate' and 'make', as we established that those columns are problematic for small clusters)
 		columns.put(recommendedColumn, 0.0f); // return recommendedColumn to 'columns' HashMap for this testing
-		columns.remove("issuedate");
-		columns.remove("make");
 
 		multipleColumnsPartitioning.clear();
 
@@ -169,9 +165,6 @@ public class DataManager {
 			stmt.execute("SET hive.exec.dynamic.partition.mode=nonstrict");
 			stmt.execute("SET hive.exec.max.dynamic.partitions=100000");
 			stmt.execute("SET hive.exec.max.dynamic.partitions.pernode=100000");
-
-			
-
 
 			String partitionQuery = "CREATE TABLE IF NOT EXISTS " + dbName + "." + partitionTableName + " (";
 			Vector<String> columns = new Vector<String>();
