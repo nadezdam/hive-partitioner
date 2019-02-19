@@ -16,4 +16,4 @@ violationcode,
 violationdesc,
 latitude,
 longitude,
-fineamount FROM Parking.ParkingCitations
+fineamount FROM Parking.ParkingCitations   
