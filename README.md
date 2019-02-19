@@ -15,7 +15,7 @@
 	
 Web interfejsi:
 
-NameNode: http://localhost:50070
-ApplicationManager: http://localhost:8088
-JobHistory: http://localhost:19888
-HiveServer2: http://localhost:10002
+* NameNode: http://localhost:50070
+* ApplicationManager: http://localhost:8088
+* JobHistory: http://localhost:19888
+* HiveServer2: http://localhost:10002
